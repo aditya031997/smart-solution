@@ -1,0 +1,10 @@
+const express = require("express");
+const AuthConroller = require ("../controller/AuthConroller");
+const JWT  = require("../helpers/jwt");
+const verifyUserCookieAccessToken = JWT.verifyUserCookieAccessToken;
+const router = express.Router();
+router.post("/user/login", AuthConroller.login);
+router.post("/user/logout", verifyUserCookieAccessToken, AuthConroller.logout);
+router.post("/admin/Login", AuthConroller.adminLogin);
+router.post("/admin/Logout", verifyUserCookieAccessToken, AuthConroller.adminLogout);
+module.exports = router;

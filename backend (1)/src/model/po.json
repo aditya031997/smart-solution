@@ -1,0 +1,129 @@
+{
+  "info": {
+    "_postman_id": "your_postman_id",
+    "name": "Customer API",
+    "description": "Sample Postman collection for Customer API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Customer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"company_name\": \"ABC Corp\",\n  \"contact_person\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phone_number\": 1234567890,\n  \"Tax_reg_no\": 987654321,\n  \"address\": \"123 Main St\",\n  \"citys\": 1,\n  \"state\": 1,\n  \"postal_code\": 12345,\n  \"country\": 1,\n  \"address2\": \"456 Second St\",\n  \"citys2\": 2,\n  \"state2\": 2,\n  \"postal_code2\": 54321,\n  \"country2\": 2,\n  \"username\": \"john_doe\",\n  \"password\": \"securepassword\",\n  \"credit_limit\": 1000.00,\n  \"balance\": 0.00\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/customers",
+          "protocol": "http",
+          "host": [
+            "{{baseUrl}}",
+            "com"
+          ],
+          "path": [
+            "api",
+            "customers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Customer",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"company_name\": \"Updated Corp\",\n  \"contact_person\": \"Updated Doe\",\n  \"email\": \"updated.doe@example.com\",\n  \"phone_number\": 9876543210,\n  \"Tax_reg_no\": 123456789,\n  \"address\": \"Updated Main St\",\n  \"citys\": 3,\n  \"state\": 3,\n  \"postal_code\": 54321,\n  \"country\": 3,\n  \"address2\": \"Updated Second St\",\n  \"citys2\": 4,\n  \"state2\": 4,\n  \"postal_code2\": 98765,\n  \"country2\": 4,\n  \"username\": \"updated_doe\",\n  \"password\": \"updatedpassword\",\n  \"credit_limit\": 2000.00,\n  \"balance\": 500.00\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/customers/{customer_id}",
+          "protocol": "http",
+          "host": [
+            "{{baseUrl}}",
+            "com"
+          ],
+          "path": [
+            "api",
+            "customers",
+            "{customer_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Find Customer",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/customers/{customer_id}",
+          "protocol": "http",
+          "host": [
+            "{{baseUrl}}",
+            "com"
+          ],
+          "path": [
+            "api",
+            "customers",
+            "{customer_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Find All Customers",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/customers",
+          "protocol": "http",
+          "host": [
+            "{{baseUrl}}",
+            "com"
+          ],
+          "path": [
+            "api",
+            "customers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Customer",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "{{baseUrl}}/api/customers/{customer_id}",
+          "protocol": "http",
+          "host": [
+            "{{baseUrl}}",
+            "com"
+          ],
+          "path": [
+            "api",
+            "customers",
+            "{customer_id}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
